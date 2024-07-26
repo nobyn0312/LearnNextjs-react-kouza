@@ -2,10 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+import Links from "../../components/Links";
+import Headline from "../../components/Headline";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Head>
@@ -15,7 +18,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-      <h1>about</h1>
+        <Header />
+        <main>
+
+        <Headline page="about"/>
+
+          <Links />
+        </main>
+
+        <Footer />
       </main>
     </>
   );
