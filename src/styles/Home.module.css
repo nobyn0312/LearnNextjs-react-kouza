@@ -46,6 +46,12 @@
   width: 100%;
 }
 
+.grid a {
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin: 10px;
+}
+
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
