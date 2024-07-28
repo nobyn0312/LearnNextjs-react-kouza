@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 import Headline from "@/components/Headline";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 export default function Home() {
 
@@ -14,6 +14,12 @@ export default function Home() {
       alert("");
   },[])
 
+  useEffect(()=>{
+    document.body.style.backgroundColor="lightblue"
+    return()=>{
+       document.body.style.backgroundColor="pink"
+    }
+  },[])
 
   return (
     <>
