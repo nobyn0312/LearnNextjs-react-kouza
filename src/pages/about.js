@@ -11,6 +11,7 @@ export default function About() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header/>
       <Main page="about" />
       <Footer />
     </>
