@@ -4,34 +4,36 @@ import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 import Headline from "@/components/Headline";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
 
-  const handleClick=useCallback((e)=>{
-      console.log(e.target.href);
-      e.prevent.Default();
-      alert("");
-  },[])
+  const [count, setCount] = useState(1);
 
-  useEffect(()=>{
-    document.body.style.backgroundColor="lightblue"
-    return()=>{
-       document.body.style.backgroundColor="pink"
+
+  const handleClick = (e) => {
+    setCount((count) => count + 1);
+  }
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightblue"
+    return () => {
+      document.body.style.backgroundColor = "pink"
     }
-  },[])
+  }, [])
 
   return (
     <>
-    <div className={styles.container}></div>
+
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
-      <Main page="index" />
+      <Header />
+      <h1>{count}</h1>
+      <button onClick={handleClick}>ボタン</button>
 
-      <a href="/about" onClick={handleClick}>ボタン</a>
+      <Main page="index" />
       <Footer />
     </>
   );
