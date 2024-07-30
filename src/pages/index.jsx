@@ -11,6 +11,8 @@ export default function Home() {
   const [count, setCount] = useState(1);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState([]);
+
 
 
   const handleClick = useCallback(
@@ -41,6 +43,10 @@ export default function Home() {
     setText(e.target.value)
    },[])
 
+   const handleAdd = useCallback(()=>{
+    alert()
+   },[])
+
   return (
     <>
 
@@ -58,6 +64,13 @@ export default function Home() {
         <input type="text"
          value={text}
          onChange={handleChange} />
+
+         <button onClick={handleAdd}>追加</button>
+         <ul>
+          {array.map((item)=>{
+            return <li key={item}>{item}</li>
+          })}
+         </ul>
       </div>
 
       <Main page="index" />
