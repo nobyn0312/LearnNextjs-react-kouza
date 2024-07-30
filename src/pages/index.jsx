@@ -14,16 +14,15 @@ export default function Home() {
   const [array, setArray] = useState([]);
 
 
-
   const handleClick = useCallback(
     (e) => {
       if (count < 10) {
-        setCount((count) => count + 1);
+        setCount((prevCount) => prevCount + 1);
       }
     }, [count])
 
     const handleDisplay =useCallback((()=>{
-      setIsShow((isShow)=>!isShow)
+      setIsShow((prevIsShow)=>!prevIsShow)
     },[]))
 
             // if(isShow){
@@ -44,8 +43,14 @@ export default function Home() {
    },[])
 
    const handleAdd = useCallback(()=>{
-    alert()
-   },[])
+    setArray((prevArray)=>{
+      if(prevArray.some(item => item === text)){
+        alert("同じ")
+        return prevArray;
+      }
+      return newArray = [...prevArray, text]
+    });
+   },[text])
 
   return (
     <>
@@ -65,7 +70,8 @@ export default function Home() {
          value={text}
          onChange={handleChange} />
 
-         <button onClick={handleAdd}>追加</button>
+         <br/>
+         <button onClick={handleAdd}>配列追加</button>
          <ul>
           {array.map((item)=>{
             return <li key={item}>{item}</li>
