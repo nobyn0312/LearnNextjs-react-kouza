@@ -8,6 +8,7 @@ export default function Headline(props) {
     <p className={classes.description}>
     get started
     </p>
+
     <code className={classes.code}>pages/{props.children}</code>
     </>
   );
