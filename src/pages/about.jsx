@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 
 
 export default function About(props) {
-  const { count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd } = props;
+  const { count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd ,doubleCount} = props;
 
   return (
     <>
@@ -16,7 +16,8 @@ export default function About(props) {
       </Head>
       <Header />
       <div style={{ margin: "0 auto", textAlign: "center" }}>
-        {isShow ? (<h1>{count}</h1>) : (null)}
+      <p>2倍した値</p>
+        {isShow ? (<h1>{doubleCount}</h1>) : (null)}
         <button onClick={handleClick}>ボタン</button>
         <button onClick={handleDisplay}>
           {isShow ? "非表示" : "表示"}</button>
