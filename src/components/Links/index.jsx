@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import classes from "./Links.module.css";
 
-export default function Links({ items, handleReduce }) {
+export const Links=({ items, handleReduce })=> {
 
   return (
     <>

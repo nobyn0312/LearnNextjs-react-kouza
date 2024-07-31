@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Headline.module.css";
 
-export default function Headline(props) {
+export const Headline =(props) => {
   return (
     <>
       <h1 className={classes.title}>{props.page} Page</h1>

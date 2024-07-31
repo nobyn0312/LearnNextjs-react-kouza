@@ -7,7 +7,7 @@ const NAV_ITEMS = [
 
 ]
 
-export default function Header() {
+export const Header=()=> {
   return (
     <>
       <header className={classes.header}>

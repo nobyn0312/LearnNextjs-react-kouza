@@ -1,6 +1,6 @@
 import classes from "./Main.module.css";
-import Links from "../Links";
-import Headline from "../Headline";
+import {Links} from "../Links";
+import {Headline} from "../Headline";
 import { useCallback, useState } from "react";
 
 
@@ -28,7 +28,7 @@ const ITEMS = [
 ]
 
 
-export default function Main(props) {
+export const Main =(props) =>{
   const [items, setItems] = useState(ITEMS);
   const handleReduce = useCallback(() => {
     setItems((prevItems) => {

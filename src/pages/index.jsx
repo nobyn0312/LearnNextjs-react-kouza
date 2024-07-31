@@ -1,10 +1,9 @@
+import { useCallback, useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Footer } from "@/components/Footer";
-import Header from "@/components/Header";
-import Main from "@/components/Main";
-import Headline from "@/components/Headline";
-import { useCallback, useEffect, useState } from "react";
+import {Header} from "@/components/Header";
+import {Main} from "@/components/Main";
 
 export default function Home(props) {
   // const { count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd } = props;
