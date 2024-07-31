@@ -3,16 +3,10 @@ import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 import { useCallback, useEffect, useState } from "react";
-import { useCounter } from "@/hooks/useCounter";
-import { useInputArray } from "@/hooks/useInputArray";
-import { useBgLightBlue } from "@/hooks/useBgLightBlue";
 
 
-
-export default function About() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
+export default function About(props) {
+  const { count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd ,doubleCount} = props;
 
   return (
     <>
@@ -22,7 +16,8 @@ export default function About() {
       </Head>
       <Header />
       <div style={{ margin: "0 auto", textAlign: "center" }}>
-        {isShow ? (<h1>{count}</h1>) : (null)}
+      <p>2倍した値</p>
+        {isShow ? (<h1>{doubleCount}</h1>) : (null)}
         <button onClick={handleClick}>ボタン</button>
         <button onClick={handleDisplay}>
           {isShow ? "非表示" : "表示"}</button>
