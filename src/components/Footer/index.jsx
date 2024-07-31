@@ -1,11 +1,11 @@
 import classes from "./Footer.module.css";
 
- export  function Footer() {
+export function Footer() {
   return (
     <>
-    <footer className={classes.footer}>
-      <p>フッターコンポーネント</p>
-    </footer>
+      <footer className={classes.footer}>
+        <p>フッターコンポーネント</p>
+      </footer>
     </>
   );
 }

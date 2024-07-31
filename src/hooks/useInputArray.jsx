@@ -2,23 +2,23 @@ const { useState, useCallback } = require("react");
 
 
 
-export const useInputArray =()=>{
+export const useInputArray = () => {
   const [text, setText] = useState("");
   const [array, setArray] = useState([]);
 
-  const handleChange =useCallback((e) => {
+  const handleChange = useCallback((e) => {
     setText(e.target.value)
-   },[])
+  }, [])
 
-   const handleAdd = useCallback(()=>{
-    setArray((prevArray)=>{
-      if(prevArray.some(item => item === text)){
+  const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.includes(text)) {
         alert("同じ")
         return prevArray;
       }
-      return newArray = [...prevArray, text]
+      return [...prevArray, text]
     });
-   },[text])
+  }, [text])
 
-   return {text, array , handleChange,handleAdd}
+  return { text, array, handleChange, handleAdd }
 }

@@ -1,23 +1,21 @@
-
-
-.title{
+.title {
   margin: 0;
   line-height: 1.5;
   font-size: 2rem;
   text-transform: capitalize;
 }
 
-.title a{
+.title a {
   color: #0070f3;
   text-decoration: none;
 }
 
 .title,
-.description{
+.description {
   text-align: center;
 }
 
-.description{
+.description {
   line-height: 1.5;
   font-size: 1.5rem;
 }

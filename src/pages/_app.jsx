@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="/public/favicon.ico" />
       </Head>
-      <Component {...pageProps} {...counter}{...inputArray}/>;
+      <Component {...pageProps} {...counter}{...inputArray} />;
     </>
 
   )

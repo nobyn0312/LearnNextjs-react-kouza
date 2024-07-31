@@ -29,22 +29,22 @@ const ITEMS = [
 
 
 export default function Main(props) {
-  const [items,setItems] =useState(ITEMS);
-  const handleReduce =useCallback(()=>{
-    setItems((prevItems)=>{
-      return prevItems.slice(0,prevItems.length -1)
+  const [items, setItems] = useState(ITEMS);
+  const handleReduce = useCallback(() => {
+    setItems((prevItems) => {
+      return prevItems.slice(0, prevItems.length - 1)
     })
-  },[])
+  }, [])
 
   return (
     <>
       <main className={classes.main}>
-      <Headline page={props.page}>
-        <code className={classes.code}>
-         {props.page}
-        </code>
-      </Headline>
-      <Links items={items} handleReduce={handleReduce}/>
+        <Headline page={props.page}>
+          <code className={classes.code}>
+            {props.page}
+          </code>
+        </Headline>
+        <Links items={items} handleReduce={handleReduce} />
       </main>
     </>
   );
